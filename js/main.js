@@ -1,9 +1,18 @@
 // Toggle navigation
-$(document).ready(function() {
-  
-  $("#toggle").click(function() {
-    $(this).toggleClass("on");
-    $("#resize").toggleClass("active");
+// $(document).ready(function() {
+//
+//   $("#toggle").click(function() {
+//     $(this).toggleClass("on");
+//     $("#resize").toggleClass("active");
+//   });
+// });
+
+
+//  navigation
+$(".navicon-button").click(function() {
+  $(this).toggleClass("open");
+  $("header nav").slideToggle(400, function() {
+    $(this).toggleClass("nav-expanded").css('display', '');
   });
 });
 
